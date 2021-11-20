@@ -25,11 +25,14 @@ else:
     os.mkdir(save_backup_directory)
 
 exitsave_path = data["stoneShard_save_directory"]
-exitsave_files = os.listdir(exitsave_path)
+stoneshard_save_path_exists = os.path.isdir(exitsave_path)
 
 # Copy save files into the backup #
-for file in exitsave_files:
-    shutil.copy(exitsave_path + "/" + file, save_backup_directory)
+if(stoneshard_save_path_exists):
+    exitsave_files = os.listdir(exitsave_path)
+    for file in exitsave_files:
+        shutil.copy(exitsave_path + "/" + file, save_backup_directory)
+    print("\033[0;32mDONE\033[0;0;0m")
+else:
+    print("\033[0;31mexitsave_1 path don't exist\033[0;0;0m")
 
-
-print("\033[0;32mDONE\033[0;0;0m")
