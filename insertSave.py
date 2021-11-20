@@ -23,6 +23,5 @@ def insertSave():
         # Insert files from backup #
         backup_files = os.listdir(backup_directory)
         for file in backup_files:
-            print(file)
             shutil.copy(backup_directory + "/" + file, exitsave_path)
         print("\t--DONE--")
