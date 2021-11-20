@@ -3,6 +3,7 @@
 
 ## Setup
   Configure the program by opening the "config.json" file.
+  
   In this file you will find the following fields:
    
 
