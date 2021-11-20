@@ -16,3 +16,13 @@
  > The stoneshard save /exitsave_1 path.
  > 
  >**Note that the character_# can change depending on how many characters you have. Choose the path for the character you are playing/want to make the backup upon "save and exit".**
+
+### "backup_key": "f5"
+ > Shortcut to backup save.
+
+### "insert_save_key": "f8"
+ > Shortcut to apply saved backup.
+
+### "exit_key": "f9"
+ > Shortcut to exit executing the program.
+    
