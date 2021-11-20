@@ -15,4 +15,4 @@
 ### stoneShard_save_directory
  > The stoneshard save /exitsave_1 path.
  > 
- >**Note that the character_1 can change depending on how many characters you have. Choose the one you are playing/want to make the backup upon "save and exit".**
+ >**Note that the character_* can change depending on how many characters you have. Choose the one you are playing/want to make the backup upon "save and exit".**
