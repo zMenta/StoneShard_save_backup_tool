@@ -2,10 +2,8 @@
  A tool to create backups and load them.
 
 ## Setup
-   >"save_backup_directory": "C:/",
-   >
-   >
-   >"stoneShard_save_directory": "C:/Users/****/AppData/Local/StoneShard/characters_v1/character_1/exitsave_1"
+  Configure the program by opening the "config.json" file.
+  In this file you will find the following fields:
    
 
 ### save_backup_directory
