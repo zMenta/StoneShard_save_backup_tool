@@ -1,5 +1,5 @@
 from backupSave import backupSave
-# import insertSave
+from insertSave import insertSave
 import json
 import keyboard
 
@@ -11,10 +11,10 @@ insert_key = data["insert_save_key"]
 exit_key = data["exit_key"]
 
 while True:
-    print(keyboard.read_key())
+    keyboard.read_key()
     if keyboard.is_pressed(backup_key):
         backupSave()
     if keyboard.is_pressed(insert_key):
-        print("batata")
+        insertSave()
     if keyboard.is_pressed(exit_key):
         break

@@ -12,7 +12,7 @@ backup_exist = os.path.isdir(save_backup_directory)
 exitsave_path_exists = os.path.isdir(exitsave_path)
 
 def backupSave():
-    print("--START--")
+    print("--BACKUP SAVE START--")
     # Creates or remove the backup files #
     if(backup_exist):
         save_backup_directory_files = os.listdir(save_backup_directory)
@@ -28,7 +28,7 @@ def backupSave():
         exitsave_files = os.listdir(exitsave_path)
         for file in exitsave_files:
             shutil.copy(exitsave_path + "/" + file, save_backup_directory)
-        print("--DONE--")
+        print("\t--DONE--")
     else:
         print("--exitsave_1 path don't exist--")
 
