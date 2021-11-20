@@ -23,16 +23,19 @@ def backupSave():
         # Remove the backup files #
         if(exitsave_path_exists):
             backup_directory_files = os.listdir(backup_directory)
-            for file in backup_directory_files:
-                path = os.path.join(backup_directory, file)
-                os.remove(path)
+            if len(os.listdir(exitsave_path)) == 3:
+                for file in backup_directory_files:
+                    path = os.path.join(backup_directory, file)
+                    os.remove(path)
+                
+                # Copy save files into the backup #
+                exitsave_files = os.listdir(exitsave_path)
+                for file in exitsave_files:
+                    shutil.copy(exitsave_path + "/" + file, backup_directory)
+                print("\t--DONE--")
+            else:
+                print("stoneshard exitsave_1 path folder don't contain all necessary files to backup.")
 
-            # Copy save files into the backup #
-            exitsave_files = os.listdir(exitsave_path)
-            for file in exitsave_files:
-                shutil.copy(exitsave_path + "/" + file, backup_directory)
-            print("\t--DONE--")
 
         else:
             print("--stoneshard exitsave_1 path don't exist--")
-            
