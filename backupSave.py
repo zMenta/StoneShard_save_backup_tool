@@ -35,6 +35,4 @@ def backupSave():
 
         else:
             print("--stoneshard exitsave_1 path don't exist--")
-
-backupSave()
-
+            
