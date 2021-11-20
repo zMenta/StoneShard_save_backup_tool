@@ -28,5 +28,4 @@ def insertSave():
             print("\t--DONE--")
         else:
             print("--backup file does not exist--")
-
-insertSave()
+            
