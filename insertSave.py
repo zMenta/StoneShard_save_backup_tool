@@ -3,7 +3,6 @@ import shutil
 import json
 
 def insertSave():
-
     with open('config.json') as file:
         data = json.load(file)
 
@@ -11,31 +10,19 @@ def insertSave():
     exitsave_path = data["stoneShard_save_directory"]
     backup_exist = os.path.isdir(backup_directory)
     exitsave_exists = os.path.isdir(exitsave_path)
-    
-    print("--START: APPLY SAVE--")
-    # Remove the stoneshard save file if the file exists#
-    if(exitsave_exists):
-        stoneshard_save_files= os.listdir(exitsave_path)
-        for file in stoneshard_save_files:
-            path = os.path.join(exitsave_path, file)
-            os.remove(path)
-        os.rmdir(exitsave_path)
 
-    def insertFiles():
+    print("--START: APPLY SAVE--")
+    # verifies if stoneshard exit_save exists#
+    if not exitsave_exists:
         os.mkdir(exitsave_path)
+        print("--stoneshard exitsave_1 path don't exist--")
+        print("--stoneshard exitsave_1 created--")
+        print("--please try again--")
+
+    else:
+        # Insert files from backup #
         backup_files = os.listdir(backup_directory)
         for file in backup_files:
-            shutil.copy(backup_directory + "/" + file, exitsave_path + "/exitsave_1")
+            print(file)
+            shutil.copy(backup_directory + "/" + file, exitsave_path)
         print("\t--DONE--")
-
-    # Insert backup files #
-    backup_files = os.listdir(backup_directory)
-    print(backup_exist)
-    if(backup_exist and len(backup_files) != 0):
-        if exitsave_exists:
-            os.rmdir(exitsave_path)
-            insertFiles()
-        else:
-            insertFiles()
-    else:
-        print("--backup don't exist--")
