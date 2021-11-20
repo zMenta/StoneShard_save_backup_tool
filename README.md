@@ -7,7 +7,7 @@
   In this file you will find the following fields:
    
 
-### save_backup_directory
+### -save_backup_directory
  >- The directory you want the backup to be saved.
  
  
