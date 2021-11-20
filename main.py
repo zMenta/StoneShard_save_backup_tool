@@ -1,5 +1,11 @@
 import os
 import shutil
+import json
+
+# Use .txt later for easier use.
+config_file = open('config.json')
+config = json.load(config_file)
+print(config)
 
 local_directory = os.getcwd()
 # print(local_directory)
