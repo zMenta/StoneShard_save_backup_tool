@@ -21,7 +21,12 @@ def insertSave():
 
     else:
         # Insert files from backup #
-        backup_files = os.listdir(backup_directory)
-        for file in backup_files:
-            shutil.copy(backup_directory + "/" + file, exitsave_path)
-        print("\t--DONE--")
+        if(backup_exist):
+            backup_files = os.listdir(backup_directory)
+            for file in backup_files:
+                shutil.copy(backup_directory + "/" + file, exitsave_path)
+            print("\t--DONE--")
+        else:
+            print("--backup file does not exist--")
+
+insertSave()
