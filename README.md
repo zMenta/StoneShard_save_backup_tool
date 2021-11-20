@@ -34,7 +34,7 @@
 
    After that, you execute the run.py file. A terminal windown will open, after this everything is working as long you keep the run.py open.
    
-   Use the shortcuts to save, apply the backups in the game or exit the terminal.
+   Use the shortcuts to save, apply the backup in the game or exit the terminal.
 
   
    If you want you can run the files backupSave.py and insertSave.py separately.
