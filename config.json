@@ -1,8 +1,8 @@
 {
     "save_backup_directory": "E:/Repositorios/Python/StoneShard_save_backup_tool",
     "stoneShard_save_directory": "C:/Users/brent/AppData/Local/StoneShard/characters_v1/character_2/exitsave_1",
-    "backup_key": "o",
-    "insert_save_key": "p",
-    "exit_key": "l"
+    "backup_key": "f5",
+    "insert_save_key": "f8",
+    "exit_key": "f9"
 
 }
