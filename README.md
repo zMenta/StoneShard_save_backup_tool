@@ -29,3 +29,12 @@
  > -Shortcut to exit executing the program.
  > -Default key: F9
     
+## How to Use
+   First you need to download python into your machine. 
+
+   After that, you execute the run.py file. A terminal windown will open, after this everything is working as long you keep the run.py open.
+   
+   Use the shortcuts to save, apply the backups in the game or exit the terminal.
+
+  
+   If you want you can run the files backupSave.py and insertSave.py separately.
