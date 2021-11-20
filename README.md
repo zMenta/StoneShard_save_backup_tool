@@ -37,4 +37,4 @@
    Use the shortcuts to save, apply the backup in the game or exit the terminal.
 
   
-   If you want you can run the files backupSave.py and insertSave.py separately.
+   If you want you can run the files backupSave.py and insertSave.py manually.
