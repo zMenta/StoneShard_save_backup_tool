@@ -38,3 +38,5 @@
 
   
    If you want you can run the files backupSave.py and insertSave.py manually.
+
+   **Note: The program does a backup of the save when you exit to the menu. It WON'T backup other saves.**
