@@ -4,11 +4,6 @@ import json
 
 print("\033[0;32mSTART\033[0;0;0m")
 
-# Use .txt later for easier use.
-#Load CONFIG #
-# config_file = open('config.json')
-# config = json.load(config_file)
-
 with open('config.json') as file:
     data = json.load(file)
 
