@@ -8,7 +8,9 @@ with open('config.json') as file:
     data = json.load(file)
 
 save_backup_directory = data['save_backup_directory'] + "/exitsave_1"
+exitsave_path = data["stoneShard_save_directory"]
 backup_exist = os.path.isdir(save_backup_directory)
+exitsave_path_exists = os.path.isdir(exitsave_path)
 
 # Creates or remove the backup files #
 if(backup_exist):
@@ -19,11 +21,9 @@ if(backup_exist):
 else:
     os.mkdir(save_backup_directory)
 
-exitsave_path = data["stoneShard_save_directory"]
-stoneshard_save_path_exists = os.path.isdir(exitsave_path)
 
 # Copy save files into the backup #
-if(stoneshard_save_path_exists):
+if(exitsave_path_exists):
     exitsave_files = os.listdir(exitsave_path)
     for file in exitsave_files:
         shutil.copy(exitsave_path + "/" + file, save_backup_directory)
