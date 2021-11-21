@@ -1,7 +1,6 @@
 from backupSave import backupSave
 from insertSave import insertSave
-import json
-import keyboard
+import json, keyboard
 
 with open('config.json') as file:
     data = json.load(file)
