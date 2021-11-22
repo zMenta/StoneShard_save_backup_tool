@@ -1,6 +1,6 @@
 {
     "backup_directory": "C:/",
-    "stoneShard_save_directory": "C:/Users/****/AppData/Local/StoneShard/characters_v1/character_1/exitsave_1",
+    "stoneShard_directory": "C:/Users/****/AppData/Local/StoneShard/characters_v1/character_1/exitsave_1",
     "backup_key": "f5",
     "insert_save_key": "f8",
     "exit_key": "f9"

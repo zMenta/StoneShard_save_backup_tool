@@ -13,7 +13,7 @@ def load_config(config_path):
     with open(config_path) as file:
         config = json.load(file)
         data["backup_directory"] = config["backup_directory"]
-        data["backup_directory"] = config["backup_directory"]
+        data["stoneShard_directory"] = config["backup_directory"]
         data["backup_directory"] = config["backup_directory"]
         data["backup_directory"] = config["backup_directory"]
         return config
