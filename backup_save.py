@@ -20,13 +20,27 @@ def load_config(config_path):
         return data
 
 def backup_save(config):
-    print("--START: BACKUP SAVE--")
-    # Create directory if backup don't exists #
-    if not op.isdir(config["backup_directory"]):
-        print("backup directory don't exist")
+    backup_directory = config["backup_directory"] + "/exitsave_1"
+    backup_directory_exists = op.isdir(backup_directory)
 
-    if op.isdir(config["backup_directory"]):
+    stoneShard_directory = config["stoneShard_directory"]
+
+    print("--START: BACKUP SAVE--")
+    if not backup_directory_exists:
+        os.mkdir(backup_directory)
+        backup_directory_exists = op.isdir(backup_directory)
+        print("Created exitsave_1 backup folder")
+
+    if backup_directory_exists:
         print("backup directory Exist")
+
+        # Remove the backup files #
+        if(exitsave_path_exists):
+            backup_directory_files = os.listdir(backup_directory)
+            if len(os.listdir(exitsave_path)) == 3:
+                for file in backup_directory_files:
+                    path = os.path.join(backup_directory, file)
+                    os.remove(path)
     
         # os.mkdir(backup_directory)
         # print("--backup path don't exist--")
