@@ -33,20 +33,15 @@ def backup_save(config):
         print("Created exitsave_1 backup folder")
 
     if backup_directory_exists:
-        # Remove the backup files if Stoneshard_directory is not empty#
+        # Remove the backup files if Stoneshard_directory has 3 files #
         print("Backup exists")
         if(stoneShard_directory_exists and len(os.listdir(stoneShard_directory)) == 3):
             backup_directory_files = os.listdir(backup_directory)
             for file in backup_directory_files:
                 path = op.join(backup_directory, file)
                 os.remove(path)
-            print("REMOVED FILES")
-    
-        # os.mkdir(backup_directory)
-        # print("--backup path don't exist--")
-        # print("--backup path created--")
-        # print("--please try again--")
-    
+            print("Removed files")
+
 
 def main():
     config = load_config("config.json")
