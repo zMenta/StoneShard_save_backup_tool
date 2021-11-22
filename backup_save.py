@@ -1,9 +1,34 @@
 import os
+import os.path as op
 import json
 import shutil
 
+def load_config(config_path):
+    data = dict()
+
+    if not op.exists(config_path):
+        print("Config file don't exist")
+        return data
+    
+    with open(config_path) as file:
+        config = json.load(file)
+        data["backup_directory"] = config["backup_directory"]
+        data["backup_directory"] = config["backup_directory"]
+        data["backup_directory"] = config["backup_directory"]
+        data["backup_directory"] = config["backup_directory"]
+        return config
+
+config = load_config("config.json")
+print(config)
+
+# for key,value in config.items:
+#     print(f"{key} = {value}")
+
+# print(config["backup_directory"])
+
+
 def main():
-    print(os.path.exists("config.json"))
+    pass
 
 if __name__ == "__main__":
     main()
