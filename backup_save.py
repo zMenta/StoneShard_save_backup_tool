@@ -13,22 +13,33 @@ def load_config(config_path):
     with open(config_path) as file:
         config = json.load(file)
         data["backup_directory"] = config["backup_directory"]
-        data["stoneShard_directory"] = config["backup_directory"]
-        data["backup_directory"] = config["backup_directory"]
-        data["backup_directory"] = config["backup_directory"]
-        return config
+        data["stoneShard_directory"] = config["stoneShard_directory"]
+        data["backup_save_key"] = config["backup_save_key"]
+        data["insert_save_key"] = config["insert_save_key"]
+        data["exit_key"] = config["exit_key"]
+        return data
 
-config = load_config("config.json")
-print(config)
+def backup_save(config):
+    print("--START: BACKUP SAVE--")
+    # Create directory if backup don't exists #
+    if not op.isdir(config["backup_directory"]):
+        print("backup directory don't exist")
 
-# for key,value in config.items:
-#     print(f"{key} = {value}")
-
-# print(config["backup_directory"])
-
+    if op.isdir(config["backup_directory"]):
+        print("backup directory Exist")
+    
+        # os.mkdir(backup_directory)
+        # print("--backup path don't exist--")
+        # print("--backup path created--")
+        # print("--please try again--")
+    
 
 def main():
-    pass
+    config = load_config("config.json")
+    backup_save(config)
+
+
+
 
 if __name__ == "__main__":
     main()
