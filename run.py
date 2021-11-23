@@ -1,19 +1,24 @@
-from backupSave import backupSave
-from insertSave import insertSave
-import json, keyboard
+import keyboard
 
-with open('config.json') as file:
-    data = json.load(file)
+from settings import load_config
+from backup_save import backup_save
+from insert_save import insert_save
 
-backup_key = data["backup_key"]
-insert_key = data["insert_save_key"]
-exit_key = data["exit_key"]
+def main():
+    config = load_config("config.json")
 
-while True:
-    keyboard.read_key()
-    if keyboard.is_pressed(backup_key):
-        backupSave()
-    if keyboard.is_pressed(insert_key):
-        insertSave()
-    if keyboard.is_pressed(exit_key):
-        break
+    backup_key = config["backup_save_key"]
+    insert_key = config["insert_save_key"]
+    exit_key = config["exit_key"]
+
+    while True:
+        keyboard.read_key()
+        if keyboard.is_pressed(backup_key):
+            backup_save(config)
+        if keyboard.is_pressed(insert_key):
+            insert_save(config)
+        if keyboard.is_pressed(exit_key):
+            break
+
+if __name__ == "__main__":
+    main()
