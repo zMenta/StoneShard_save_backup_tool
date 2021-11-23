@@ -1,9 +1,8 @@
 import os
 import os.path as op
 import shutil
-import json
 
-import backup_save
+from settings import load_config
 
 def insert_save(config):
     backup_directory = config["backup_directory"] + "/exitsave_1"
@@ -31,7 +30,7 @@ def insert_save(config):
 
 
 def main():
-    config = backup_save.load_config("config.json")
+    config = load_config("config.json")
     insert_save(config)
 
 if __name__ == "__main__":
