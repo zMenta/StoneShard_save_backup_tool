@@ -42,21 +42,20 @@ def backup_save(config):
 
     if backup_directory_exists:
         print("Backup folder exists")
-    
-    # Remove the backup files if Stoneshard_directory has 3 files #
-    if(stoneShard_directory_exists and stoneShard_number_of_files == 3):
-        backup_directory_files = os.listdir(backup_directory)
-        for file in backup_directory_files:
-            path = op.join(backup_directory, file)
-            os.remove(path)
-        print("Removed backup files")
+        # Remove the backup files if Stoneshard_directory has 3 files #
+        if(stoneShard_directory_exists and stoneShard_number_of_files == 3):
+            backup_directory_files = os.listdir(backup_directory)
+            for file in backup_directory_files:
+                path = op.join(backup_directory, file)
+                os.remove(path)
+            print("Removed backup files")
 
-        # Copy save files into the backup #
-        stoneShard_files = os.listdir(stoneShard_directory)
-        for file in stoneShard_files:
-            shutil.copy(stoneShard_directory + "/" + file, backup_directory)
-        print("Files copied to backup")
-        print("--DONE--")
+            # Copy save files into the backup #
+            stoneShard_files = os.listdir(stoneShard_directory)
+            for file in stoneShard_files:
+                shutil.copy(stoneShard_directory + "/" + file, backup_directory)
+            print("Files copied to backup")
+            print("--DONE--")
 
 
 def main():
