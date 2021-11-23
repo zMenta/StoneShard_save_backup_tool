@@ -5,3 +5,4 @@ exitsave_1/data.sav
 config.json
 config.json
 __pycache__/backupSave.cpython-39.pyc
+*.pyc
