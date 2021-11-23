@@ -11,22 +11,22 @@ def insert_save(config):
     stone_shard_directory = config["stone_shard_directory"]
     stone_shard_directory_exists = op.isdir(stone_shard_directory)
 
-    print("--START: APPLY SAVE--")
+    print("--[insert_save]: START --")
     if not stone_shard_directory_exists:
         os.mkdir(stone_shard_directory)
-        print("stoneshard exitsave_1 folder created")
+        print(f"[insert_save]: Stoneshard exitsave_1 folder created at {stone_shard_directory}")
         stone_shard_directory_exists = op.isdir(stone_shard_directory)
 
     if not backup_directory_exists:
-        print("backup folder don't exist")
+        print(f"[insert_save]: Backup folder don't exist at {backup_directory}")
         pass
 
     if stone_shard_directory_exists and backup_directory_exists:
-        print("copied backup save into Stoneshard")
+        print(f"[insert_save]: Copied backup save from {backup_directory} to Stoneshard {stone_shard_directory}")
         backup_files = os.listdir(backup_directory)
         for file in backup_files:
             shutil.copy(backup_directory + "/" + file, stone_shard_directory)
-        print("--DONE--")
+        print("--[insert_save]: DONE --")
 
 
 def main():

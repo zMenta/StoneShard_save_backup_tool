@@ -11,7 +11,7 @@ def backup_save(config):
     stone_shard_directory = config["stone_shard_directory"]
     stone_shard_directory_exists = op.isdir(stone_shard_directory)
 
-    print("--[backup_save]: START--")
+    print("--[backup_save]: START --")
     if not backup_directory_exists:
         os.mkdir(backup_directory)
         backup_directory_exists = op.isdir(backup_directory)
@@ -40,7 +40,7 @@ def backup_save(config):
             for file in stone_shard_files:
                 shutil.copy(stone_shard_directory + "/" + file, backup_directory)
             print(f"[backup_save]: Copied files from Stoneshard {stone_shard_directory} to Backup {backup_directory}")
-            print("--[backup_save]: DONE--")
+            print("--[backup_save]: DONE --")
 
 
 def main():
