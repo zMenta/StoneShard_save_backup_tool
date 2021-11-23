@@ -10,7 +10,6 @@ def backup_save(config):
 
     stone_shard_directory = config["stone_shard_directory"]
     stone_shard_directory_exists = op.isdir(stone_shard_directory)
-    stone_shard_number_of_files = len(os.listdir(stone_shard_directory))
 
     print("--[backup_save]: START--")
     if not backup_directory_exists:
@@ -19,7 +18,7 @@ def backup_save(config):
         print(f"[backup_save]: create backup folder at {backup_directory}")
 
     if not stone_shard_directory_exists:
-        print(f"[backup_save]: StoneShard exitsave_1 don't exist at {stone_shard_directory}")
+        print(f"[backup_save]: StoneShard directory don't exist {stone_shard_directory}")
         return
 
     if len(os.listdir(stone_shard_directory)) != 3:
@@ -27,6 +26,7 @@ def backup_save(config):
         return
 
     if backup_directory_exists:
+        stone_shard_number_of_files = len(os.listdir(stone_shard_directory))
         # Remove the backup files if Stone_shard_directory has 3 files #
         if(stone_shard_directory_exists and stone_shard_number_of_files == 3):
             backup_directory_files = os.listdir(backup_directory)
