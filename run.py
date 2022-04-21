@@ -1,8 +1,8 @@
 import keyboard
-
 from settings import load_config
 from backup_save import backup_save
 from insert_save import insert_save
+
 
 def main():
     config = load_config("config.json")
@@ -19,6 +19,7 @@ def main():
             insert_save(config)
         if keyboard.is_pressed(exit_key):
             break
+
 
 if __name__ == "__main__":
     main()
