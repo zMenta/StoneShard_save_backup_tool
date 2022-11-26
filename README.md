@@ -6,7 +6,7 @@
 
    2 - Install Python 'keyboard' module.
 
-   Note: You can install the keyboard module via pip. Open your terminal / command prompt and type:
+   After having python installed, open your terminal / command prompt and type:
 
          pip install keyboard
 
