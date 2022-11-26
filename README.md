@@ -1,7 +1,19 @@
 # StoneShard_save_backup_tool
  A tool to create backups and load them.
 
-## Setup
+### Requirements
+   1 - Have Python installed in your machine.
+
+   2 - Install Python 'keyboard' module.
+
+   Note: You can install the keyboard module via pip. Open your terminal / command prompt and type:
+
+         pip install keyboard
+
+  After these steps you have everything setup to use the tool.
+
+
+## Setup and Usage
   Configure the program by opening the "config.json" file.
   
   In this file you will find the following fields:
@@ -30,13 +42,13 @@
  > -Default key: F9
     
 ## How to Use
-   First you need to download python into your machine. 
 
-   After that, you execute the run.py file. A terminal windown will open, after this everything is working as long you keep the run.py open.
+   Execute run.py file. A terminal windown will open, after this everything is working as long you keep the run.py open.
    
    Use the shortcuts to save, apply the backup in the game or exit the terminal.
+   You can check the text logs in the terminal to know what is happeing.
 
   
    If you want you can run the files backupSave.py and insertSave.py manually.
 
-   **Note: The program does a backup of the save when you exit to the menu. It WON'T backup other saves.**
+   **Note: The program does a backup of the save when you exit to the menu to the specified character. It WON'T backup other saves.**
